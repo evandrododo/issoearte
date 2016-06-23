@@ -8,18 +8,34 @@
     }
     .quadro {
         position:absolute;
-        box-shadow: 0px 0px 0px 1px #000,0px 0px 0px 4px #240, 0px 0px 0px 6px
-        #860, 0px 1px 0px 7px #A74, 0px 0px 0px 9px #D74, 2px -2px 7px 9px
-        rgba(255,255,255,0.1);  
+    }
+    img {
+        max-width:300px;
+        max-height:300px;
+        z-index:1;
     }
     .polaroid{
 
     }
-
+    .moldura-1 {
+        background-image:url("frame1.png");
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: contain; 
+        width: 206px;
+        height: 300px;
+        padding: 49px; 
+        position: absolute;
+        top: 20px;
+        left:100px;
+        z-index:2;
+    }
   </style>
 </head>
 <body>
     <section id="quadros">
+        <div class="quadro moldura-1">
+            <img src="mona-lisa.jpg">
     </section>
     <script>
     (function() {
@@ -35,7 +51,7 @@
 
 
         var init = function(){
-            Quadros.addQuadro("http://evandrocarreira.com/img/freedom.png");
+            //Quadros.addQuadro("http://evandrocarreira.com/img/freedom.png");
         };
         init();
 
