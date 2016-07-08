@@ -38,20 +38,38 @@
             <img src="mona-lisa.jpg">
     </section>
     <script>
+
+    var artes = [
+        { url: '100x100.png', width:100, height:100 },
+        { url: '200x100.png', width:200, height:100 },
+        { url: '100x200.png', width:100, height:200 },
+        { url: '300x100.png', width:300, height:100 }
+    ];
+    
+
+
+    var molduras = [
+        { proporcao: 0.50, url: '0_50.png', width:300, height:400 },
+        { proporcao: 0.75, url: '0_75.png', width:100, height:200 },
+        { proporcao: 1, url: '1.png', width:100, height:100 },
+        { proporcao: 2, url: '2.png', width:200, height:100 },
+        { proporcao: 3, url: '3.png', width:300, height:100 }
+    ];
+    
     (function() {
 
         var Quadros = Quadros || {};
         Quadros.addQuadro = function(img){
             var div = document.createElement('div');
-            div.innerHTML = "<img src='"+img+"'>";
-            div.setAttribute('class', 'moldura-1 quadro'); // and make sure myclass has some styles in css
+            div.innerHTML = "<img src='"+artes[0].url+"'>";
+            div.setAttribute('class', 'moldura-1 quadro');            
             document.getElementById('quadros').appendChild(div);
-
         };
 
 
         var init = function(){
-            //Quadros.addQuadro("http://evandrocarreira.com/img/freedom.png");
+
+            Quadros.addQuadro("http://evandrocarreira.com/img/freedom.png");
         };
         init();
 
